@@ -58,14 +58,6 @@ app.use(express.static("./public"))
 // fileUpload
 app.use(fileUpload())
 
-app.get("/", (req, res) => {
-  res.send("E-commerce API")
-})
-
-app.get("/api/v1", (req, res) => {
-  console.log(req.signedCookies)
-  res.send("E-commerce API")
-})
 
 // authMiddleware
 const { authenticateUser } = require("./middleware/authentication")
